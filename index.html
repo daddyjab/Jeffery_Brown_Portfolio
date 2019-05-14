@@ -3,86 +3,151 @@
 <!-- 
 Jeffery Brown Portfolio Project
 @Author: Jeffery Brown (daddyjab)
-@Date: 4/10/19
+@Date: 5/13/19
 @File: index.html
  -->
 
 <html lang="en">
-  
- <head>
-   <meta charset="utf-8">
-   <title>Jeffery Brown's Portfolio of Projects</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
-   <!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
-   <link rel="stylesheet" href="static/css/style.css">
- </head>
- 
- <body>
-   <div class="wrapper">
-     <nav class="navbar navbar-default">
-       <div class="container-fluid">
-         <div class="navbar-header">
-           <a class="navbar-brand" href="index.html">Portfolio
-             <img class="nav-ufo" src="static/images/ufo.svg">
-           </a>
-         </div>
-       </div>
-     </nav>
-     <div class="hero text-center">
-       <h1>UFO Sightings</h1>
-       <p>The Truth is Out There</p>
-     </div>
-     <div class="container">
-       <div class="row margin-top-50">
-         <div class="col-md-2">
-           <aside class="filters">
-             <div class="panel panel-default">
-               <div class="panel-heading">Filter Search</div>
-               <div class="panel-body">
-                 <form>
-                   <div class="form-group">
-                     <ul class="list-group" id="filters">
-                       <li class="filter list-group-item">
-                         <label for="date">Enter a Date<br>(* = all dates)</label>
-                         <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
-                       </li>
-                     </ul>
-                   </div>
-                   <button id="filter-btn" type="submit" class="btn btn-default">Filter Table</button>
-                 </form>
-               </div>
-             </div>
-           </aside>
-         </div>
-         <div class="col-md-10">
-           <div id="table-area" class="">
-             <table id="ufo-table" class="table table-striped">
-               <thead>
-                 <tr>
-                   <th class="table-head">Date</th>
-                   <th class="table-head">City</th>
-                   <th class="table-head">State</th>
-                   <th class="table-head">Country</th>
-                   <th class="table-head">Shape</th>
-                   <th class="table-head">Duration</th>
-                   <th class="table-head">Comments</th>
-                 </tr>
-               </thead>
-               <tbody></tbody>
-             </table>
-           </div>
-         </div>
-       </div>
-     </div>
-     <footer class="footer">
-       <span class="bottom">UFO Sightings</span>
-     </footer>
-   </div>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-   <script src="static/js/ufo_sitings_data.js"></script>
-   <script src="static/js/aliens.js"></script>
- </body>
- 
- </html>
- 
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Project Portfolio</title>
+
+  <!-- Bring in our bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-6">
+            <div class="navbar">
+              <ul>
+                <li>
+                  <select id="fig_select" onchange="window.open(this.value)">
+                    <option value="" selected disabled hidden>Select a Project...</option>
+                    <option value="projectpage.html">GeoTweet</option>
+                    <option value="projectpage.html">Earthquake</option>
+                    <option value="projectpage.html">Citibike</option>
+                    <option value="projectpage.html">I Was Poisoned</option>
+                    <option value="projectpage.html">Biodiversity</option>
+                    <option value="projectpage.html">Health Risks</option>
+                    <option value="projectpage.html">Weather by Latitude</option>
+                    <option value="projectpage.html">Mars Mission</option>
+                    <option value="projectpage.html">Stock Reports</option>
+                  </select>
+                </li>
+                <li><a href="https://www.linkedin.com/in/jefferyabrown" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/daddyjab" target="_blank">GitHub Repositories</a></li>
+                <li><a href="jab_resume.html" target="_blank">Resume</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-5">
+        <div class="jeff_info">
+          <h1>Jeffery Brown</h1>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="col-md-5">
+                <div class="jeff_image">
+                  <img src="static/images/JefferyBrown_Small.jpg" height="200" alt="Jeffery Brown">
+                </div>
+              </div>
+              <div class="col-md-7">
+                <p>Applying Technical Leadership, Experience, Tools and Techniques to Real World Challenges</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-7">
+        <div class="project_info">
+          <h1>Projects</h1>
+
+          <div id="project_table_area">
+            <table id="project_table" class="table">
+              <thead>
+                <tr>
+                  <th>Project</th>
+                  <th>Description</th>
+                  <th>Technologies</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>GeoTweet</td>
+                  <td>brief description</td>
+                  <td>Python, Flask, SQLAlchemy, SQLite, Postgres, Extract/Translate/Load, JavaScript, D3, Leaflet,
+                    Plotly, Machine Learning, Heroku</td>
+                </tr>
+
+                <tr>
+                  <td>Earthquake</td>
+                  <td>brief_description</td>
+                  <td>JavaScript, D3, Leaflet</td>
+                </tr>
+                <tr>
+                  <td>Citibike</td>
+                  <td>brief_description</td>
+                  <td>Python, Data Munging, Tableau</td>
+                </tr>
+                <tr>
+                  <td>I Was Poisoned</td>
+                  <td>brief_description</td>
+                  <td>Python, MongoDB, Extract/Translate/Load, Web Scraping, BeautifulSoup</td>
+                </tr>
+                <tr>
+                  <td>Biodiversity</td>
+                  <td>brief_description</td>
+                  <td>Python, Flask, SQLAlchemy, SQLite, D3, Plotly</td>
+                </tr>
+                <tr>
+                  <td>Health Risks</td>
+                  <td>brief_description</td>
+                  <td>JavaScript, D3</td>
+                </tr>
+                <tr>
+                  <td>Weather by Latitude</td>
+                  <td>brief_description</td>
+                  <td>Python, Matplotlib, HTML, CSS, Bootstrap</td>
+                </tr>
+                <tr>
+                  <td>Mars Mission</td>
+                  <td>brief_description</td>
+                  <td>Python, Flask, PyMongo, MongoDB, Web Scraping, BeautifulSoup, Splite</td>
+                </tr>
+                <tr>
+                  <td>Stock Reports</td>
+                  <td>brief_description</td>
+                  <td>Excel VBA</td>
+                </tr>
+
+              </tbody>
+
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
