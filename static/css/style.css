@@ -20,9 +20,11 @@
   vertical-align:middle;
   color: darkslategrey;
   font-weight:600;
-  height:20px;
-  padding:2px;
+  /* height:20px; */
+  padding:5px;
   margin:25px 2px 2px 2px;
+  background-color: lightgrey;
+  border-radius: 10%;
 }
 
 /* Navigation Bar => Hyperlinks */
@@ -46,46 +48,61 @@
   color:black;
 }
 
-/* Header for the page */
-.header h1 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size:30px;
-  color:white;
-
-  background-color: #4AAAA5;
-  text-align: center;
-  font-weight: 600;
-  padding: 20px 0px 20px 0px;
-  margin: 0px;
-}
-
 /*************************************************/
 /* Introduction Content  */
 .jeff_info {
-  display:block;
+  display: inline-block;
   background-color:lightgrey;
-  padding: 10;
-  margin: 0 auto;
-  text-align:left;
-  vertical-align:top;
+  padding: 10px;
+  margin: 5px auto;
+  text-align: left;
   color: black;
+  border-radius: 5%;
 }
 
-.jeff_info p {
-  font-size:20px;
+.jeff_info img {
+  float: left;
+  padding: 0 10px 0 10px;
+}
+
+.jeff_info h5 {
+  font-size: 22px;
+  font-weight:700;
+}
+
+/*************************************************/
+/* Technology Used */
+.tech_used {
+  display: inline-block;
+  background-color:lightgrey;
+  padding: 10px;
+  margin: 5px auto;
+  text-align: left;
+  color: black;
+  border-radius: 5%;
+}
+
+#tech_used_list {
+  font-size: 18px;
+  font-weight:700;
+}
+
+.tech_used_item:hover {
   font-weight:800;
+  color:blue;
 }
 
 /*************************************************/
 /* Project Content  */
 .project_info {
-  display:block;
+  display:inline-table;
   background-color:lightgrey;
-  padding: 10;
-  margin: 0 auto;
+  padding: 10px;
+  margin: 5px auto;
+  border-radius: 5%;
 }
 
-.project_info table {
+#project_info_table {
   text-align:left;
   font-size:15px;
   vertical-align:top;
@@ -93,10 +110,30 @@
   font-weight:600;
 }
 
-.project_info table th {
-  text-align:left;
+#project_info_table th {
   font-size:17px;
-  vertical-align:top;
+  vertical-align:bottom;
   color: black;
+  font-weight:700;
+}
+
+.project_name {
+  color: darkblue;
+  font-size:18px;
+  font-weight:700;
+}
+
+.project_name:hover {
   font-weight:800;
+  color: blue;
+}
+
+.project_link:hover {
+  font-weight:800;
+  color: blue;
+}
+
+.project_tech_term:hover {
+  font-weight:800;
+  color: blue;
 }
