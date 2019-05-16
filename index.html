@@ -14,140 +14,122 @@ Jeffery Brown Portfolio Project
   <meta charset="UTF-8">
   <title>Project Portfolio</title>
 
-  <!-- Bring in our bootstrap stylesheet -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Styling for this Portfolio Project page -->
   <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body>
 
   <div class="container">
-    <div class="row align-items-center">
+    <div class="row">
       <div class="col-md-12">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-6">
-            <div class="navbar">
-              <ul>
-                <li>
-                  <select id="fig_select" onchange="window.open(this.value)">
-                    <option value="" selected disabled hidden>Select a Project...</option>
-                    <option value="projectpage.html">GeoTweet</option>
-                    <option value="projectpage.html">Earthquake</option>
-                    <option value="projectpage.html">Citibike</option>
-                    <option value="projectpage.html">I Was Poisoned</option>
-                    <option value="projectpage.html">Biodiversity</option>
-                    <option value="projectpage.html">Health Risks</option>
-                    <option value="projectpage.html">Weather by Latitude</option>
-                    <option value="projectpage.html">Mars Mission</option>
-                    <option value="projectpage.html">Stock Reports</option>
-                  </select>
-                </li>
-                <li><a href="https://www.linkedin.com/in/jefferyabrown" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/daddyjab" target="_blank">GitHub Repositories</a></li>
-                <li><a href="jab_resume.html" target="_blank">Resume</a></li>
-              </ul>
-            </div>
+        <div class="float-right">
+          <div class="navbar">
+            <ul>
+              <li><a href="https://www.linkedin.com/in/jefferyabrown" target="_blank">LinkedIn</a></li>
+              <li><a href="https://github.com/daddyjab" target="_blank">GitHub Repositories</a></li>
+              <li><a href="jab_resume.html" target="_blank">Resume</a></li>
+              <li><a href="mailto:JefferyBrown2019@u.northwestern.edu" target="_blank">Contact Me</a></li>
+            </ul>
           </div>
-
         </div>
       </div>
-
     </div>
 
     <div class="row">
 
-      <div class="col-md-5">
-        <div class="jeff_info">
-          <h1>Jeffery Brown</h1>
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <div class="col-md-5">
-                <div class="jeff_image">
-                  <img src="static/images/JefferyBrown_Small.jpg" height="200" alt="Jeffery Brown">
+      <div class="col-md-4">
+
+        <div class="row">
+
+          <div class="jeff_info">
+
+            <h1>Jeffery Brown</h1>
+
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <img src="static/images/JefferyBrown_Small.jpg" height="150" alt="Jeffery Brown">
+                <h5>Applying Technical Leadership, Experience, Tools and Techniques to Real World Challenges</h5>
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="tech_used">
+
+            <h1>Technologies Used</h1>
+
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div id="tech_used_list">
                 </div>
               </div>
-              <div class="col-md-7">
-                <p>Applying Technical Leadership, Experience, Tools and Techniques to Real World Challenges</p>
-              </div>
             </div>
+
           </div>
         </div>
 
       </div>
 
-      <div class="col-md-7">
+      <div class="col-md-8">
         <div class="project_info">
           <h1>Projects</h1>
 
-          <div id="project_table_area">
-            <table id="project_table" class="table">
-              <thead>
-                <tr>
-                  <th>Project</th>
-                  <th>Description</th>
-                  <th>Technologies</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>GeoTweet</td>
-                  <td>brief description</td>
-                  <td>Python, Flask, SQLAlchemy, SQLite, Postgres, Extract/Translate/Load, JavaScript, D3, Leaflet,
-                    Plotly, Machine Learning, Heroku</td>
-                </tr>
+          <table class="table" id="project_info_table">
+            <thead>
+              <tr>
+                <th>Project</th>
+                <th>Links</th>
+                <th>Description</th>
+                <th>Technologies</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
 
-                <tr>
-                  <td>Earthquake</td>
-                  <td>brief_description</td>
-                  <td>JavaScript, D3, Leaflet</td>
-                </tr>
-                <tr>
-                  <td>Citibike</td>
-                  <td>brief_description</td>
-                  <td>Python, Data Munging, Tableau</td>
-                </tr>
-                <tr>
-                  <td>I Was Poisoned</td>
-                  <td>brief_description</td>
-                  <td>Python, MongoDB, Extract/Translate/Load, Web Scraping, BeautifulSoup</td>
-                </tr>
-                <tr>
-                  <td>Biodiversity</td>
-                  <td>brief_description</td>
-                  <td>Python, Flask, SQLAlchemy, SQLite, D3, Plotly</td>
-                </tr>
-                <tr>
-                  <td>Health Risks</td>
-                  <td>brief_description</td>
-                  <td>JavaScript, D3</td>
-                </tr>
-                <tr>
-                  <td>Weather by Latitude</td>
-                  <td>brief_description</td>
-                  <td>Python, Matplotlib, HTML, CSS, Bootstrap</td>
-                </tr>
-                <tr>
-                  <td>Mars Mission</td>
-                  <td>brief_description</td>
-                  <td>Python, Flask, PyMongo, MongoDB, Web Scraping, BeautifulSoup, Splite</td>
-                </tr>
-                <tr>
-                  <td>Stock Reports</td>
-                  <td>brief_description</td>
-                  <td>Excel VBA</td>
-                </tr>
-
-              </tbody>
-
-            </table>
-          </div>
+          </table>
 
         </div>
       </div>
     </div>
 
   </div>
+
+  <!--Footer & Copyright-->
+  <footer">
+    <div class="footer-copyright text-center py-3"><small>&copy; 2019 Jeffery Brown</small></div>
+    </footer>
+
+    <!-- Bootstrap library -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+    <!--D3.js-->
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+
+    <!-- Script: Content for the List of Portfolio Projects -->
+    <script type="text/javascript" src="static/js/portfolio_info.js"></script>
+
+    <!-- Script: Management of the portfolio page -->
+    <script type="text/javascript" src="static/js/portfolio_mgmt.js"></script>
+
 </body>
 
 </html>
