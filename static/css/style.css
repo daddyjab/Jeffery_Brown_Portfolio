@@ -4,6 +4,17 @@
 @Page: style.css
 **************************************************************/
 
+body, html {
+  height: 100%;
+}
+
+/*************************************************/
+/* Background Image */
+.bg {
+  /* background-image: url("../images/JefferyBrown_Large.jpg"); */
+  background-image: linear-gradient(to bottom right, navy, teal);
+}
+
 /*************************************************/
 /* Navigation Bar */
 .navbar {
@@ -58,6 +69,8 @@
   text-align: left;
   color: black;
   border-radius: 5%;
+
+  background-image: linear-gradient(to bottom right, lightblue, lightgrey);
 }
 
 .jeff_info img {
@@ -80,6 +93,8 @@
   text-align: left;
   color: black;
   border-radius: 5%;
+
+  background-image: linear-gradient(to bottom right, lightblue, lightgrey);
 }
 
 #tech_used_list {
@@ -100,6 +115,8 @@
   padding: 10px;
   margin: 5px auto;
   border-radius: 5%;
+
+  background-image: linear-gradient(to bottom right, lightblue, lightgrey);
 }
 
 #project_info_table {

@@ -2,10 +2,11 @@
 // This object provides the project info for the list of projects
 portfolioInfo = [
     {   projectName: 'GeoTweet',
-        description: 'brief description',
+        description: 'Full-stack Interactive Dashboard of Twitter Trends',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/Project-2.io' },
-            {linkTag: 'Heroku', linkURL: 'https://geotweetapp.herokuapp.com'}
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/GeoTweet' },
+            {linkTag: 'Summary(pdf)', linkURL: 'https://github.com/daddyjab/GeoTweet/blob/master/resources/Data%20Science%20Bootcamp-Final%20Project.pdf'},
+            {linkTag: 'Visualization', linkURL: 'https://geotweetapp.herokuapp.com'}
             ],
         technologies: [
             'Python', 'Flask', 'SQLAlchemy', 'SQLite', 'Postgres', 'ETL (Extract/Translate/Load)', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Heroku'
@@ -13,10 +14,10 @@ portfolioInfo = [
     },
 
     {   projectName: 'Earthquake',
-        description: 'brief description',
+        description: 'Visualization of Recent Global Earthquake Activity',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/project_earthquake' },
-            {linkTag: 'Web', linkURL: 'https://www.northwestern.edu'}
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/Earthquake' },
+            {linkTag: 'Visualization', linkURL: 'https://daddyjab.github.io/Earthquake/'}
             ],
         technologies: [
             'JavaScript', 'D3', 'Leaflet'
@@ -24,10 +25,12 @@ portfolioInfo = [
     },
 
     {   projectName: 'CitiBike',
-        description: 'brief description',
+        description: 'Analysis of CitiBike Usage in the Jersey City Area',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/project_citibike' },
-            {linkTag: 'Tableau Public', linkURL: 'https://public.tableau.com/profile/jeffery.brown#!/vizhome/CitiBike_with_Paths_Idle_Time_JAB_v5/StoryCitiBike'}
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/CitiBike' },
+            {linkTag: 'Data Exploration', linkURL: 'https://github.com/daddyjab/CitiBike/blob/master/Citibike_Exploration_JAB.ipynb'},
+            {linkTag: 'Visualization', linkURL: 'https://public.tableau.com/profile/jeffery.brown#!/vizhome/CitiBike_with_Paths_Idle_Time_JAB_v5/StoryCitiBike'},
+            {linkTag: 'Tableau (twbx)', linkURL: 'https://github.com/daddyjab/CitiBike/blob/master/CitiBike_with_Paths_Idle_Time_JAB_v5.twbx'}
             ],
         technologies: [
             'Python', 'Data Munging', 'Tableau'
@@ -35,9 +38,10 @@ portfolioInfo = [
     },
 
     {   projectName: 'I Was Poisoned',
-        description: 'brief description',
+        description: 'Extract/Translate/Load operations to support analysis of Food Poisoning incidents vs. Food Inspections',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/ETL_Project' }
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/IWasPoisoned_ETL' },
+            {linkTag: 'Summary', linkURL: 'https://github.com/daddyjab/IWasPoisoned_ETL/blob/master/Documentation/ETL_Project_Report.ipynb' }
             ],
         technologies: [
             'Python', 'MongoDB', 'ETL (Extract/Translate/Load)', 'Web Scraping', 'BeautifulSoup'
@@ -45,19 +49,21 @@ portfolioInfo = [
     },
 
     {   projectName: 'Biodiversity',
-        description: 'brief description',
+        description: 'Visualization of Bacterial Biodiversity',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/project_biodiversity' }
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/Biodiversity' },
+            {linkTag: 'Visualization', linkURL: 'https://project-biodiversity.herokuapp.com/'}
             ],
         technologies: [
-            'Python', 'Flask', 'SQLAlchemy', 'SQLite', 'D3', 'Plotly'
+            'Python', 'Flask', 'SQLAlchemy', 'SQLite', 'D3', 'Plotly', 'Heroku'
             ]
     },
 
     {   projectName: 'Health Risks',
-        description: 'brief description',
+        description: 'Visualization of Health Risks, including D3 Animation',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/project_health_risks' }
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/HealthRisks' },
+            {linkTag: 'Visualization', linkURL: 'https://daddyjab.github.io/HealthRisks/' }
             ],
         technologies: [
             'JavaScript', 'D3'
@@ -65,10 +71,11 @@ portfolioInfo = [
     },
 
     {   projectName: 'Weather by Latitude',
-        description: 'brief description',
+        description: 'Analysis of Variation in Weather at various Latitudes',
         links: [
-            {linkTag: 'GitHub - Analysis', linkURL: 'https://github.com/daddyjab/python-challenge/tree/master/WeatherPy'},
-            {linkTag: 'GitHub - Visualization', linkURL: 'https://github.com/daddyjab/project_latitude' }
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/WeatherByLatitude/tree/master/WeatherPy'},
+            {linkTag: 'Analysis', linkURL: 'https://github.com/daddyjab/WeatherByLatitude/blob/master/WeatherPy/WeatherPy-jb.ipynb'},
+            {linkTag: 'Visualization', linkURL: 'https://daddyjab.github.io/WeatherByLatitudeVisualization' }
             ],
         technologies: [
             'Python', 'Matplotlib', 'HTML', 'CSS', 'Bootstrap'
@@ -77,9 +84,10 @@ portfolioInfo = [
 
 
     {   projectName: 'Mars Mission',
-        description: 'brief description',
+        description: 'Mars News Site, generated through Web Scraping and rendered as a responsive page',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/project_mars_mission' }
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/MarsNews' },
+            {linkTag: 'Sample', linkURL: 'https://github.com/daddyjab/MarsNews/blob/master/screenshots/03_Mission_to_Mars_Medium_Wide_Window.png' }
             ],
         technologies: [
             'Python', 'Flask', 'PyMongo', 'MongoDB', 'Web Scraping', 'BeautifulSoup', 'Splinter'
@@ -87,9 +95,10 @@ portfolioInfo = [
     },
 
     {   projectName: 'Stock Reports',
-        description: 'brief description',
+        description: 'Generation of Stock Performance Repors using MS Excel VBA',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/BootCampAssignments' }
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/StockReports' },
+            {linkTag: 'Sample', linkURL: 'https://github.com/daddyjab/StockReports/blob/master/screencapture-wallstreet-multiyear-2016-jab.png' }
             ],
         technologies: [
             'Excel VBA'

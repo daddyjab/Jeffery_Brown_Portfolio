@@ -130,4 +130,4 @@ buildProjectInfoTable();
 buildTechUsedList();
 
 // Output the list of technology terms
-console.log(allTechnologyTerms)
+// console.log(allTechnologyTerms)
