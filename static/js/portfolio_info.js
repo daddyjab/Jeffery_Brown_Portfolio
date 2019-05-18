@@ -4,7 +4,7 @@ portfolioInfo = [
     {   projectName: 'GeoTweet',
         description: 'Full-stack Interactive Dashboard of Twitter Trends',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/GeoTweet' },
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/GeoTweet/blob/master/README.md' },
             {linkTag: 'Summary(pdf)', linkURL: 'https://github.com/daddyjab/GeoTweet/blob/master/resources/Data%20Science%20Bootcamp-Final%20Project.pdf'},
             {linkTag: 'Visualization', linkURL: 'https://geotweetapp.herokuapp.com'}
             ],
