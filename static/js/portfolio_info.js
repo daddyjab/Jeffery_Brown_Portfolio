@@ -62,7 +62,7 @@ portfolioInfo = [
     {   projectName: 'Health Risks',
         description: 'Visualization of Health Risks, including D3 Animation',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/HealthRisks' },
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/HealthRisks/blob/master/README.md' },
             {linkTag: 'Visualization', linkURL: 'https://daddyjab.github.io/HealthRisks/' }
             ],
         technologies: [
