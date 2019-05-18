@@ -97,8 +97,7 @@ portfolioInfo = [
     {   projectName: 'Stock Reports',
         description: 'Generation of Stock Performance Reports using MS Excel VBA',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/StockReports/blob/master/README.md' },
-            {linkTag: 'Sample', linkURL: 'https://github.com/daddyjab/StockReports/blob/master/docs/screencapture-wallstreet-multiyear-2016-jab.png' }
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/StockReports/blob/master/README.md' }
             ],
         technologies: [
             'Excel VBA'
