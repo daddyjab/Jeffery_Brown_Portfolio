@@ -48,14 +48,26 @@ portfolioInfo = [
             ]
     },
 
-    {   projectName: 'Biodiversity',
-        description: 'Visualization of Bacterial Biodiversity',
+    {   projectName: 'Weather by Latitude',
+        description: 'Analysis of Variation in Weather at various Latitudes',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/Biodiversity' },
-            {linkTag: 'Visualization', linkURL: 'https://project-biodiversity.herokuapp.com/'}
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/WeatherByLatitude/tree/master/WeatherPy'},
+            {linkTag: 'Analysis', linkURL: 'https://github.com/daddyjab/WeatherByLatitude/blob/master/WeatherPy/WeatherPy-jb.ipynb'},
+            {linkTag: 'Visualization', linkURL: 'https://daddyjab.github.io/WeatherByLatitudeVisualization' }
             ],
         technologies: [
-            'Python', 'Flask', 'SQLAlchemy', 'SQLite', 'D3', 'Plotly', 'Heroku'
+            'Python', 'Matplotlib', 'HTML', 'CSS', 'Bootstrap'
+            ]
+    },
+
+    {   projectName: 'Mars Mission',
+        description: 'Mars News Site, generated through Web Scraping and rendered as a responsive page',
+        links: [
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/MarsNews' },
+            {linkTag: 'Sample', linkURL: 'https://github.com/daddyjab/MarsNews/blob/master/screenshots/03_Mission_to_Mars_Medium_Wide_Window.png' }
+            ],
+        technologies: [
+            'Python', 'Flask', 'PyMongo', 'MongoDB', 'Web Scraping', 'BeautifulSoup', 'Splinter'
             ]
     },
 
@@ -70,27 +82,14 @@ portfolioInfo = [
             ]
     },
 
-    {   projectName: 'Weather by Latitude',
-        description: 'Analysis of Variation in Weather at various Latitudes',
+    {   projectName: 'Biodiversity',
+        description: 'Visualization of Bacterial Biodiversity',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/WeatherByLatitude/tree/master/WeatherPy'},
-            {linkTag: 'Analysis', linkURL: 'https://github.com/daddyjab/WeatherByLatitude/blob/master/WeatherPy/WeatherPy-jb.ipynb'},
-            {linkTag: 'Visualization', linkURL: 'https://daddyjab.github.io/WeatherByLatitudeVisualization' }
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/Biodiversity/blob/master/README.md' },
+            {linkTag: 'Visualization', linkURL: 'https://project-biodiversity.herokuapp.com/'}
             ],
         technologies: [
-            'Python', 'Matplotlib', 'HTML', 'CSS', 'Bootstrap'
-            ]
-    },
-
-
-    {   projectName: 'Mars Mission',
-        description: 'Mars News Site, generated through Web Scraping and rendered as a responsive page',
-        links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/MarsNews' },
-            {linkTag: 'Sample', linkURL: 'https://github.com/daddyjab/MarsNews/blob/master/screenshots/03_Mission_to_Mars_Medium_Wide_Window.png' }
-            ],
-        technologies: [
-            'Python', 'Flask', 'PyMongo', 'MongoDB', 'Web Scraping', 'BeautifulSoup', 'Splinter'
+            'Python', 'Flask', 'SQLAlchemy', 'SQLite', 'D3', 'Plotly', 'Heroku'
             ]
     },
 
