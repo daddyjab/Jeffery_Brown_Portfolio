@@ -9,7 +9,7 @@ portfolioInfo = [
             {linkTag: 'Visualization', linkURL: 'https://geotweetapp.herokuapp.com'}
             ],
         technologies: [
-            'Python', 'Flask', 'SQLAlchemy', 'SQLite', 'Postgres', 'ETL (Extract/Translate/Load)', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Heroku'
+            'Python', 'Jupyter Notebook', 'Flask', 'SQLAlchemy', 'SQLite', 'Postgres', 'ETL (Extract/Translate/Load)', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Heroku'
             ]
     },
 
@@ -33,7 +33,7 @@ portfolioInfo = [
             {linkTag: 'Tableau (twbx)', linkURL: 'https://github.com/daddyjab/CitiBike/blob/master/CitiBike_with_Paths_Idle_Time_JAB_v5.twbx'}
             ],
         technologies: [
-            'Python', 'Data Munging', 'Tableau'
+            'Python', 'Jupyter Notebook', 'Data Munging', 'Tableau'
             ]
     },
 
@@ -44,7 +44,7 @@ portfolioInfo = [
             {linkTag: 'Summary', linkURL: 'https://github.com/daddyjab/IWasPoisoned_ETL/blob/master/Documentation/ETL_Project_Report.ipynb' }
             ],
         technologies: [
-            'Python', 'MongoDB', 'ETL (Extract/Translate/Load)', 'Web Scraping', 'BeautifulSoup'
+            'Python', 'Jupyter Notebook', 'MongoDB', 'ETL (Extract/Translate/Load)', 'Web Scraping', 'BeautifulSoup'
             ]
     },
 
@@ -56,7 +56,7 @@ portfolioInfo = [
             {linkTag: 'Visualization', linkURL: 'https://daddyjab.github.io/WeatherByLatitudeVisualization' }
             ],
         technologies: [
-            'Python', 'Matplotlib', 'HTML', 'CSS', 'Bootstrap'
+            'Python', 'Jupyter Notebook', 'Matplotlib', 'HTML', 'CSS', 'Bootstrap'
             ]
     },
 
@@ -67,7 +67,7 @@ portfolioInfo = [
             {linkTag: 'Sample', linkURL: 'https://github.com/daddyjab/MarsNews/blob/master/screenshots/03_Mission_to_Mars_Medium_Wide_Window.png' }
             ],
         technologies: [
-            'Python', 'Flask', 'PyMongo', 'MongoDB', 'Web Scraping', 'BeautifulSoup', 'Splinter'
+            'Python', 'Jupyter Notebook', 'Flask', 'PyMongo', 'MongoDB', 'Web Scraping', 'BeautifulSoup', 'Splinter'
             ]
     },
 
@@ -89,7 +89,7 @@ portfolioInfo = [
             {linkTag: 'Visualization', linkURL: 'https://project-biodiversity.herokuapp.com/'}
             ],
         technologies: [
-            'Python', 'Flask', 'SQLAlchemy', 'SQLite', 'D3', 'Plotly', 'Heroku'
+            'Python', 'Jupyter Notebook', 'Flask', 'SQLAlchemy', 'SQLite', 'D3', 'Plotly', 'Heroku'
             ]
     },
 
