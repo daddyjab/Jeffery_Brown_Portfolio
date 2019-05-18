@@ -16,7 +16,7 @@ portfolioInfo = [
     {   projectName: 'Earthquake',
         description: 'Visualization of Recent Global Earthquake Activity',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/Earthquake' },
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/Earthquake/blob/master/README.md' },
             {linkTag: 'Visualization', linkURL: 'https://daddyjab.github.io/Earthquake/'}
             ],
         technologies: [
