@@ -25,10 +25,10 @@ portfolioInfo = [
     },
 
     {   projectName: 'CitiBike',
-        description: 'Analysis of CitiBike Usage in the Jersey City Area',
+        description: 'Analysis and Visualization of CitiBike Usage in the Jersey City Area',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/CitiBike' },
-            {linkTag: 'Data Exploration', linkURL: 'https://github.com/daddyjab/CitiBike/blob/master/Citibike_Exploration_JAB.ipynb'},
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/CitiBike/blob/master/README.md' },
+            {linkTag: 'Data Munging', linkURL: 'https://github.com/daddyjab/CitiBike/blob/master/Citibike_Exploration_JAB.ipynb'},
             {linkTag: 'Visualization', linkURL: 'https://public.tableau.com/profile/jeffery.brown#!/vizhome/CitiBike_with_Paths_Idle_Time_JAB_v5/StoryCitiBike'},
             {linkTag: 'Tableau (twbx)', linkURL: 'https://github.com/daddyjab/CitiBike/blob/master/CitiBike_with_Paths_Idle_Time_JAB_v5.twbx'}
             ],
