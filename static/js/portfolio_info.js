@@ -40,7 +40,7 @@ portfolioInfo = [
     {   projectName: 'I Was Poisoned',
         description: 'Extract/Translate/Load operations to support analysis of Food Poisoning incidents vs. Food Inspections',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/IWasPoisoned_ETL' },
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/IWasPoisoned_ETL/blob/master/README.md' },
             {linkTag: 'Summary', linkURL: 'https://github.com/daddyjab/IWasPoisoned_ETL/blob/master/Documentation/ETL_Project_Report.ipynb' }
             ],
         technologies: [
