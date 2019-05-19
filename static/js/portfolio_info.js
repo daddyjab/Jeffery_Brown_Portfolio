@@ -1,6 +1,16 @@
 // portfolioInfo
 // This object provides the project info for the list of projects
 portfolioInfo = [
+    {   projectName: 'IN PROGRESS: CommTrends',
+        description: 'IN PROGRESS: An analysis of telecommunications trends in the U.S.',
+        links: [
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/CommTrends/blob/master/README.md' },
+            ],
+        technologies: [
+            'Python', 'Jupyter Notebook', 'Flask', 'SQLAlchemy', 'Postgres', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Heroku'
+            ]
+    },
+
     {   projectName: 'GeoTweet',
         description: 'Full-stack Interactive Dashboard of Twitter Trends',
         links: [
