@@ -51,9 +51,9 @@ portfolioInfo = [
     {   projectName: 'Weather by Latitude',
         description: 'Analysis of Variation in Weather at various Latitudes',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/WeatherByLatitude/tree/master/WeatherPy'},
-            {linkTag: 'Analysis', linkURL: 'https://github.com/daddyjab/WeatherByLatitude/blob/master/WeatherPy/WeatherPy-jb.ipynb'},
-            {linkTag: 'Visualization', linkURL: 'https://daddyjab.github.io/WeatherByLatitudeVisualization' }
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/WeatherByLatitude/blob/master/README.md'},
+            {linkTag: 'Analysis', linkURL: 'https://github.com/daddyjab/WeatherByLatitude/blob/master/WeatherPy-jb.ipynb'},
+            {linkTag: 'Visualization', linkURL: 'https://daddyjab.github.io/WeatherByLatitude' }
             ],
         technologies: [
             'Python', 'Jupyter Notebook', 'Matplotlib', 'HTML', 'CSS', 'Bootstrap'
