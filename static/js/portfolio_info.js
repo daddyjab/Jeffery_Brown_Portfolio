@@ -44,7 +44,7 @@ portfolioInfo = [
             {linkTag: 'Summary', linkURL: 'https://github.com/daddyjab/IWasPoisoned_ETL/blob/master/Documentation/ETL_Project_Report.ipynb' }
             ],
         technologies: [
-            'Python', 'Jupyter Notebook', 'MongoDB', 'ETL (Extract/Translate/Load)', 'Web Scraping', 'BeautifulSoup'
+            'Python', 'Jupyter Notebook', 'MongoDB', 'ETL (Extract/Translate/Load)', 'Web Scraping', 'BeautifulSoup', 'Splinter'
             ]
     },
 
