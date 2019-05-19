@@ -60,11 +60,11 @@ portfolioInfo = [
             ]
     },
 
-    {   projectName: 'Mars Mission',
+    {   projectName: 'Mars News',
         description: 'Mars News Site, generated through Web Scraping and rendered as a responsive page',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/MarsNews' },
-            {linkTag: 'Sample', linkURL: 'https://github.com/daddyjab/MarsNews/blob/master/screenshots/03_Mission_to_Mars_Medium_Wide_Window.png' }
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/MarsNews/blob/master/README.md' },
+            {linkTag: 'Sample', linkURL: 'https://github.com/daddyjab/MarsNews/blob/master/docs/MarsNews-sample.png' }
             ],
         technologies: [
             'Python', 'Jupyter Notebook', 'Flask', 'PyMongo', 'MongoDB', 'Web Scraping', 'BeautifulSoup', 'Splinter'
