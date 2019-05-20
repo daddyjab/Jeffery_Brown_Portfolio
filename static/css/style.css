@@ -140,17 +140,18 @@ body, html {
   font-weight:700;
 }
 
-.project_name:hover {
+.project_name_highlight {
   font-weight:800;
   color: blue;
 }
 
-.project_link:hover {
+.project_link_highlight {
   font-weight:800;
   color: blue;
 }
 
-.project_tech_term:hover {
+.project_tech_term_highlight {
   font-weight:800;
   color: blue;
 }
+

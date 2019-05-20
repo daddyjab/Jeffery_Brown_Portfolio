@@ -1,10 +1,15 @@
 // Manage the portfolio page content
 
 // Global list of technology terms
-var allTechnologyTerms = new Set();
+var allTechnologyTerms = new Array();
 
 function addTechnologyTerm(a_term) {
-  allTechnologyTerms.add(a_term)
+  // Add the new term to the Array of terms
+  allTechnologyTerms.push(a_term)
+
+  // Use a Set to force the terms to be unique and
+  // then use the spread operator to convert the result back into an Array
+  allTechnologyTerms = [...new Set(allTechnologyTerms)]
 }
 
 function buildProjectInfoTable() {
@@ -21,9 +26,9 @@ function buildProjectInfoTable() {
     var row = tbody.append("tr");
 
     // Cell: Project Name
-    var cell = tbody.append("td");
-    cell.text(project.projectName);
-    cell.attr('class', "project_name")
+    var cell = tbody.append("td")
+      .text(project.projectName)
+      .attr('class', "project_name")
 
     // Cell: Project Links
 
@@ -47,11 +52,11 @@ function buildProjectInfoTable() {
 
         // Add the link Tag and URL to the link text
         var cellLinkItem = cell.append("a")
-        cellLinkItem.text(linkinfo.linkTag)
-        cellLinkItem.attr('href', linkinfo.linkURL)
-        cellLinkItem.attr('target', "_blank")
-        cellLinkItem.attr('class', "project_link")
-        cellLinkItem.attr('id', `id_${encodeURIComponent(project.projectName + '_' + linkinfo.linkTag)}`)
+          .text(linkinfo.linkTag)
+          .attr('href', linkinfo.linkURL)
+          .attr('target', "_blank")
+          .attr('class', "project_link")
+          .attr('id', `id_${encodeURIComponent(project.projectName + '_' + linkinfo.linkTag)}`)
 
         // Now, add a closing bracket
         cell.html(cell.html() + "]")
@@ -59,8 +64,8 @@ function buildProjectInfoTable() {
     });
 
     // Cell: Project Description
-    var cell = tbody.append("td");
-    cell.text(project.description);
+    var cell = tbody.append("td")
+      .text(project.description);
 
 
     // Cell: Project Technologies
@@ -82,9 +87,9 @@ function buildProjectInfoTable() {
 
         // Add the link Tag and URL to the link text
         var celltechItem = cell.append("span")
-        celltechItem.text(techTerm)
-        celltechItem.attr('class', "project_tech_term")
-        celltechItem.attr('id', `id_${encodeURIComponent(techTerm)}`)
+          .text(techTerm)
+          .attr('class', "project_tech_term")
+          .attr('id', `id_${encodeURIComponent(techTerm)}`)
 
         // Add this technology term to a global list of all the technology terms
         // added thus far -- unique terms only
@@ -98,30 +103,35 @@ function buildTechUsedList() {
   // Select the div containing the tech used list
   var techUsedDiv = d3.select("#tech_used_list");
 
-  // Clear out any current content in the list
-  techUsedDiv.html("");
+  // Bind the Set containing technology terms list to the spans we'll have on the page
+  var techUsedList = techUsedDiv.selectAll("span")
+    .data(allTechnologyTerms);
 
-  // Loop through each tech term in the global variable
-  // containing the set of tech terms, and populate it on the page
-  allTechnologyTerms.forEach(techTerm => {
+  // DEBUG:
+  // techUsedDiv.text(`Length: ${allTechnologyTerms.length}<br>First element: ${allTechnologyTerms[0]}`)
 
-    // If both the link Tag and URL are not empty, then add a span
-    if (techTerm != "") {
-
-      // If this is not the first link added to the list,
-      // then add a comma and space before the next item
-      if (techUsedDiv.html().length > 0) {
-        techUsedDiv.html(techUsedDiv.html() + ", ")
+  // For new data, add 
+  techUsedList
+    .enter()
+    .append("span")
+    .attr('class', "tech_used_item")
+    .attr('id', function (d) { return `id_${encodeURIComponent(d)}` })
+    .text(function (d, i) {
+      retval = d;
+      if (i < allTechnologyTerms.length - 1) {
+        retval += ", ";
       }
-
-      // Add the link Tag and URL to the link text
-      var techItem = techUsedDiv.append("span")
-      techItem.text(techTerm)
-      techItem.attr('class', "tech_used_item")
-      techItem.attr('id', `id_${encodeURIComponent(techTerm)}`)
-    }
-  });
-}
+      d.highlight = false;
+      return retval;
+    })
+    .on('click', function (d, i) {
+      this_id = `[id="id_${encodeURIComponent(d)}"]`
+      d3.selectAll(this_id)
+        .classed('project_tech_term_highlight', function () {
+          return !this.classList.contains("project_tech_term_highlight");
+        });
+    });
+ }
 
 // Build the Project Information table
 buildProjectInfoTable();
