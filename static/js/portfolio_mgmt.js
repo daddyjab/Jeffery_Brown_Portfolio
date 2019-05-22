@@ -13,104 +13,118 @@ function addTechnologyTerm(a_term) {
 }
 
 function buildProjectInfoTable() {
+
   // Select the table body
   var tbody = d3.select("#project_info_table>tbody");
 
-  // Clear out any current content in the table body
-  tbody.html("");
+  // Bind the object list containing project information to the spans we'll have on the page
+  var projectTableRows = tbody.selectAll("tr")
+    .data(portfolioInfo);
 
-  // Loop through each project in the portfolioInfo object
-  // and populate the table
-  portfolioInfo.forEach(project => {
-    // Add a row to the table
-    var row = tbody.append("tr");
+  // Add a table row for every projects
+  var this_row = projectTableRows
+    .enter()
+    .append("tr");
 
-    // Cell: Project Name
-    var cell = tbody.append("td")
-      .text(project.projectName)
-      .attr('class', "project_name")
+  // Cell: Project Name ******************* TABLE CELL
+  var cell_project_name = this_row
+    .append("td")
+    .append("a")
+    .attr('class', "project_name")
+    .attr('target', "_blank")                         // Open a new tab for this link
+    .attr('href', function (d) { return d.links[0].linkURL; }) // Set the link to 1st URL
+    .text(function (d) { return d.projectName; })
 
-    // Cell: Project Links
+  // Cell: Project Links ****************** TABLE CELL
+  // Create a cell to hold the list project links
+  var cell_project_links = this_row
+    .append("td");
 
-    // Create a cell to hold the list project links
-    var cell = tbody.append("td");
+  // Populating this cell requires special handling since this cell
+  // will contain a variable number of hyperlinks depending upon which project
+  // is being handled.
+  // So, bind hyperlinks in this cell to the project links data for this project
+  var this_project_link = cell_project_links.selectAll("a.project_link")
+    .data(function (d) { return d.links; });
 
-    // Loop through each specified link and append it to the link text
-    project.links.forEach(linkinfo => {
+  // Now, add a hyperlink for each project link provided for this project
+  this_project_link
+    .enter()
+    .append("a")
+    .attr('class', "project_link")                    // One class for all project links
+    .attr('target', "_blank")                         // Open a new tab for this link
+    .attr('href', function (x) { return x.linkURL; }) // Set the link to the project URL
+    .text(function (x, j) {                           // Set the tag for the URL
+      // Use the link tag specified in the data
+      retval = `[${x.linkTag}]`;
 
-      // If both the link Tag and URL are not empty, then add the link
-      if (linkinfo.linkTag != "" && linkinfo.linkURL != "") {
-
-        // If this is not the first link added to the list,
-        // then add a line break
-        if (cell.html().length > 0) {
-          cell.html(cell.html() + "<br>")
-        }
-
-        // Enclose the link in brackets -- add an opening bracket
-        cell.html(cell.html() + "[")
-
-        // Add the link Tag and URL to the link text
-        var cellLinkItem = cell.append("a")
-          .text(linkinfo.linkTag)
-          .attr('href', linkinfo.linkURL)
-          .attr('target', "_blank")
-          .attr('class', "project_link")
-          .attr('id', `id_${encodeURIComponent(project.projectName + '_' + linkinfo.linkTag)}`)
-
-        // Now, add a closing bracket
-        cell.html(cell.html() + "]")
+      // Add a trailing comma if this is not the last entry in the list
+      if (j < d3.select(this.parentNode.parentNode).datum().links.length - 1) {
+        retval += ", "
       }
-    });
+      return retval;
+    })
+    .append("br");        // Add a line break between links
 
-    // Cell: Project Description
-    var cell = tbody.append("td")
-      .text(project.description);
+  // FYI: How to get a data value from parent using (for example)
+  // d3.select(this.parentNode.parentNode).datum().projectName
+
+  // Cell: Project Description ****************** TABLE CELL
+  var cell_description = this_row
+    .append("td")
+    .text(function (d) { return d.description; });
 
 
-    // Cell: Project Technologies
-    // Create a cell to hold the list of technologies used
-    var cell = tbody.append("td");
+  // Cell: Project Technologies Used ************ TABLE CELL
+  // Create a cell to hold the list project links
+  var cell_tech_used = this_row
+    .append("td");
 
-    // Loop through each specified link and
-    // append a span to the cell for each item
-    project.technologies.forEach(techTerm => {
+  // Populating this cell requires special handling since this cell
+  // will contain a variable number of hyperlinks depending upon which project
+  // is being handled.
+  // So, bind hyperlinks in this cell to the project links data for this project
+  var this_tech_term = cell_tech_used.selectAll("span.project_tech_term")
+    .data(function (d) { return d.technologies; });
 
-      // If both the link Tag and URL are not empty, then add a span
-      if (techTerm != "") {
+  // Now, add a hyperlink for each project link provided for this project
+  this_tech_term
+    .enter()
+    .append("span")
+    .attr('class', "project_tech_term")                    // One class for all tech terms
+    .attr('id', function (x, j) { return `id_${encodeURIComponent(x)}`; })
+    .text(function (x, j) {                           // Add the technology term
+      // Add this technology term to a global list of all the technology terms
+      // -- and maintain unique terms only
+      addTechnologyTerm(x);
 
-        // If this is not the first link added to the list,
-        // then add a comma and space before the next item
-        if (cell.html().length > 0) {
-          cell.html(cell.html() + ", ")
-        }
+      retval = `${x}`;
 
-        // Add the link Tag and URL to the link text
-        var celltechItem = cell.append("span")
-          .text(techTerm)
-          .attr('class', "project_tech_term")
-          .attr('id', `id_${encodeURIComponent(techTerm)}`)
-
-        // Add this technology term to a global list of all the technology terms
-        // added thus far -- unique terms only
-        addTechnologyTerm(techTerm);
+      // Add a trailing comma if this is not the last entry in the list
+      if (j < d3.select(this.parentNode.parentNode).datum().technologies.length - 1) {
+        retval += ", "
       }
+      return retval;
+    })
+    .on('click', function (x, j) {
+      this_id = `[id="id_${encodeURIComponent(x)}"]`
+      d3.selectAll(this_id)
+        .classed('project_tech_term_highlight', function () {
+          return !this.classList.contains("project_tech_term_highlight");
+        });
     });
-  });
-}
+};
+
 
 function buildTechUsedList() {
   // Select the div containing the tech used list
   var techUsedDiv = d3.select("#tech_used_list");
 
-  // Bind the Set containing technology terms list to the spans we'll have on the page
+  // Bind the list containing technology terms to the spans we'll have on the page
   var techUsedList = techUsedDiv.selectAll("span")
     .data(allTechnologyTerms);
 
-  // DEBUG:
-  // techUsedDiv.text(`Length: ${allTechnologyTerms.length}<br>First element: ${allTechnologyTerms[0]}`)
-
-  // For new data, add 
+  // For new data, add a span with the associated tech term
   techUsedList
     .enter()
     .append("span")
@@ -131,7 +145,17 @@ function buildTechUsedList() {
           return !this.classList.contains("project_tech_term_highlight");
         });
     });
- }
+
+  // If the "Technology Used" heading is clicked,
+  // turn off all project_tech_term_highlight items
+  var techUsedHeading = d3.select("#tech_used_heading")
+    .on('click', function (d, i) {
+      // Find all tech terms on the page
+      d3.selectAll(".tech_used_item, .project_tech_term")
+        // Remove the highlight class
+        .classed('project_tech_term_highlight', false);
+    });
+}
 
 // Build the Project Information table
 buildProjectInfoTable();
