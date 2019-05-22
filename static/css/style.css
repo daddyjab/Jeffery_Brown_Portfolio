@@ -60,6 +60,13 @@ body, html {
 }
 
 /*************************************************/
+/* Page Footer */
+.page_footer {
+  font-weight: 800;
+  color: lightblue;
+}
+
+/*************************************************/
 /* Introduction Content  */
 .jeff_info {
   display: inline-block;
@@ -73,6 +80,10 @@ body, html {
   background-image: linear-gradient(to bottom right, lightblue, lightgrey);
 }
 
+.jeff_info a {
+  color: black;
+}
+
 .jeff_info img {
   float: left;
   padding: 0 10px 0 10px;
@@ -83,6 +94,13 @@ body, html {
   font-weight:700;
 }
 
+#jeff_info_heading:hover {
+  /* Turn off default underline and color on hyperlinks */
+  text-decoration:none;
+
+  font-weight:600;
+  color:blue;
+}
 /*************************************************/
 /* Technology Used */
 .tech_used {
@@ -104,6 +122,11 @@ body, html {
 
 .tech_used_item:hover {
   font-weight:800;
+  color:blue;
+}
+
+#tech_used_heading:hover {
+  font-weight:600;
   color:blue;
 }
 
@@ -138,6 +161,16 @@ body, html {
   color: darkblue;
   font-size:18px;
   font-weight:700;
+}
+
+a.project_name {
+  /* Turn off default underline and color on hyperlinks */
+  text-decoration:none;
+}
+
+.project_name:hover {
+  color: blue;
+  font-weight:800;
 }
 
 .project_name_highlight {

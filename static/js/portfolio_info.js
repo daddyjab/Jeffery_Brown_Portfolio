@@ -1,8 +1,8 @@
 // portfolioInfo
 // This object provides the project info for the list of projects
 portfolioInfo = [
-    {   projectName: 'IN PROGRESS: CommTrends',
-        description: 'IN PROGRESS: An analysis of telecommunications trends in the U.S.',
+    {   projectName: 'CommTrends (IN PROGRESS)',
+        description: 'An analysis of telecommunications trends in the U.S. (IN PROGRESS)',
         links: [
             {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/CommTrends/blob/master/README.md' },
             ],
@@ -19,7 +19,7 @@ portfolioInfo = [
             {linkTag: 'Visualization', linkURL: 'https://geotweetapp.herokuapp.com'}
             ],
         technologies: [
-            'Python', 'Jupyter Notebook', 'Flask', 'SQLAlchemy', 'SQLite', 'Postgres', 'ETL (Extract/Translate/Load)', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Heroku'
+            'Python', 'Jupyter Notebook', 'Flask', 'SQLAlchemy', 'SQLite', 'Postgres', 'ETL (Extract/Transform/Load)', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Heroku'
             ]
     },
 
@@ -48,13 +48,13 @@ portfolioInfo = [
     },
 
     {   projectName: 'I Was Poisoned',
-        description: 'Extract/Translate/Load operations to support analysis of Food Poisoning incidents vs. Food Inspections',
+        description: 'Extract/Transform/Load operations to support analysis of Food Poisoning incidents vs. Food Inspections',
         links: [
             {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/IWasPoisoned_ETL/blob/master/README.md' },
             {linkTag: 'Summary', linkURL: 'https://github.com/daddyjab/IWasPoisoned_ETL/blob/master/Documentation/ETL_Project_Report.ipynb' }
             ],
         technologies: [
-            'Python', 'Jupyter Notebook', 'MongoDB', 'ETL (Extract/Translate/Load)', 'Web Scraping', 'BeautifulSoup', 'Splinter'
+            'Python', 'Jupyter Notebook', 'MongoDB', 'ETL (Extract/Transform/Load)', 'Web Scraping', 'BeautifulSoup', 'Splinter'
             ]
     },
 
