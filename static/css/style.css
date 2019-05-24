@@ -22,6 +22,11 @@ body, html {
   margin: 0px auto;
 }
 
+/* Navigation Bar Command List */
+.navbar ul {
+  padding-left: 0px;
+}
+
 /* Navigation Bar Command List items */
 .navbar li {
   /* Cause list items to display horizontally (vs veritically) */
