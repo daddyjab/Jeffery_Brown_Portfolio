@@ -8,6 +8,10 @@ body, html {
   height: 100%;
 }
 
+body {
+  padding-top: 40px;
+}
+
 /*************************************************/
 /* Background Image */
 .bg {
@@ -20,49 +24,54 @@ body, html {
 .navbar {
   display:block;
   margin: 0px auto;
+  background-color: white;
+}
+
+.navbar button {
+  color: darkblue;
 }
 
 /* Navigation Bar Command List */
-.navbar ul {
+/* .navbar ul {
   padding-left: 0px;
-}
+} */
 
-/* Navigation Bar Command List items */
-.navbar li {
-  /* Cause list items to display horizontally (vs veritically) */
+/* Navigation Bar Command List items
+   * Cause list items to display horizontally (vs veritically) */
+/* .navbar li {
   display:inline-block;
   font-size:15px;
   text-align:center;
   vertical-align:middle;
   color: darkslategrey;
   font-weight:600;
-  /* height:20px; */
+   height:20px;
   padding:5px;
   margin:25px 2px 2px 2px;
   background-color: lightgrey;
   border-radius: 10%;
-}
+} */
 
 /* Navigation Bar => Hyperlinks */
-.navbar li a {
+/* .navbar li a { */
   /* Turn off default underline and color on hyperlinks */
-  text-decoration:none;
+  /* text-decoration:none; */
   /* Set color to match other menu items */
-  color: black;
-}
+  /* color: black;
+} */
 
 /* Navigation Bar => Plot drop-down select */
-.navbar li select {
+/* .navbar li select { */
   /* Align the default text in the drop-down "Plot" to the right */
-  text-align-last: right;
+  /* text-align-last: right; */
   /* Turn off default border around drop-down list */
-  border:0px;
-}
+  /* border:0px; */
+/* } */
 
 /* Navigation Bar => Plot drop-down select options */
-.navbar li select option {
-  color:black;
-}
+/* .navbar li select option {
+  color:black; */
+/* } */
 
 /*************************************************/
 /* Page Footer */
