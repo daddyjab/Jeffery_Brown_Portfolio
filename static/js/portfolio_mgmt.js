@@ -17,6 +17,15 @@ function buildProjectInfoTable() {
   // Select the table body
   var tbody = d3.select("#project_info_table>tbody");
 
+  // var tooltip = tbody
+  //   .append("div")
+  //   .style("position", "absolute")
+  //   .style("z-index", "10")
+  //   .style("visibility", "hidden")
+  //   .attr('id', "project_tool_tip")
+  //   .attr('class', "d-xs-block")
+  //   .text("");
+
   // Bind the object list containing project information to the spans we'll have on the page
   var projectTableRows = tbody.selectAll("tr")
     .data(portfolioInfo);
@@ -25,6 +34,33 @@ function buildProjectInfoTable() {
   var this_row = projectTableRows
     .enter()
     .append("tr");
+    // .on('mouseover', function (d, i) {
+    //   // console.log(d.description);
+    //   tooltip
+    //     .style("visibility", "visible")   // Display the tooltip
+    //     .text(d.description);           // Display the project description
+
+    //   console.log(`X: ${event.pageX}, Y: ${event.pageY}`)
+    //   console.log(event)
+    //   // console.log(tooltip.node().getBoundingClientRect())
+    // })
+    // .on('mouseout', function (d, i) {
+    //   tooltip
+    //     .style("visibility", "hidden")   // Hide the tooltip
+    //     .text("");                     // Clear the tooltip text
+    // })
+    // .on('mousemove', function (d, i) {
+    //   // Get the size of the bounding object over which we're moving
+    //   rect = this.getBoundingClientRect();
+    //   // loc_x = d3.event.pageX - rect.x - this.clientLeft - window.pageXOffset;
+    //   // loc_y = d3.event.pageY - rect.y - this.clientTop - window.pageYOffset;
+    //   loc_x = d3.event.pageX - this.clientLeft - window.pageXOffset;
+    //   loc_y = d3.event.pageY - this.clientTop - window.pageYOffset - 20;
+    //   tooltip
+    //     .style("top", (loc_y) + "px")
+    //     .style("left", (loc_x) + "px");
+    // });
+
 
   // Cell: Project Name ******************* TABLE CELL
   var cell_project_name = this_row
@@ -70,15 +106,21 @@ function buildProjectInfoTable() {
   // d3.select(this.parentNode.parentNode).datum().projectName
 
   // Cell: Project Description ****************** TABLE CELL
+  // This column is automatically set to display:none
+  // on small screens
   var cell_description = this_row
     .append("td")
+    .attr('class', "d-none d-sm-table-cell")
     .text(function (d) { return d.description; });
 
 
   // Cell: Project Technologies Used ************ TABLE CELL
   // Create a cell to hold the list project links
+  // This column is automatically set to display:none
+  // on medium or small screens
   var cell_tech_used = this_row
-    .append("td");
+    .append("td")
+    .attr('class', "d-none d-md-table-cell");
 
   // Populating this cell requires special handling since this cell
   // will contain a variable number of hyperlinks depending upon which project
