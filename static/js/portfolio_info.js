@@ -27,10 +27,11 @@ portfolioInfo = [
         description: 'Visualization of Recent Global Earthquake Activity',
         links: [
             {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/Earthquake/blob/master/README.md' },
-            {linkTag: 'Visualization', linkURL: 'https://daddyjab.github.io/Earthquake/'}
+            {linkTag: 'Visualization (D3)', linkURL: 'https://daddyjab.github.io/Earthquake/'},
+            {linkTag: 'Power BI (pbix)', linkURL: 'https://github.com/daddyjab/Earthquake/raw/master/resources/USGS%20Seismic%20Events.pbix'}
             ],
         technologies: [
-            'JavaScript', 'D3', 'Leaflet'
+            'JavaScript', 'D3', 'Leaflet', 'Power BI'
             ]
     },
 
@@ -40,7 +41,7 @@ portfolioInfo = [
             {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/CitiBike/blob/master/README.md' },
             {linkTag: 'Data Munging', linkURL: 'https://github.com/daddyjab/CitiBike/blob/master/Citibike_Exploration_JAB.ipynb'},
             {linkTag: 'Visualization', linkURL: 'https://public.tableau.com/profile/jeffery.brown#!/vizhome/CitiBike_with_Paths_Idle_Time_JAB_v5/StoryCitiBike'},
-            {linkTag: 'Tableau (twbx)', linkURL: 'https://github.com/daddyjab/CitiBike/blob/master/CitiBike_with_Paths_Idle_Time_JAB_v5.twbx'}
+            {linkTag: 'Tableau (twbx)', linkURL: 'https://github.com/daddyjab/CitiBike/raw/master/CitiBike_with_Paths_Idle_Time_JAB_v5.twbx'}
             ],
         technologies: [
             'Python', 'Jupyter Notebook', 'Data Munging', 'Tableau'
