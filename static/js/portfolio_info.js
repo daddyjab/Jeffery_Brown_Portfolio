@@ -11,6 +11,16 @@ portfolioInfo = [
             ]
     },
 
+    {   projectName: 'Machine Learning Notes',
+        description: 'Selected Notes and Code Snippets for Machine Learning (supervised, unsupervised)',
+        links: [
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/ML_Notes/blob/master/README.md' },
+            ],
+        technologies: [
+            'Python', 'Jupyter Notebook', 'Machine Learning', 'Sci-Kit Learn', 'Dataset Generation', 'Regression', 'Classification', 'Matplotlib'
+            ]
+    },
+
     {   projectName: 'GeoTweet',
         description: 'Full-stack Interactive Dashboard of Twitter Trends',
         links: [
