@@ -7,7 +7,7 @@ portfolioInfo = [
             {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/CommTrends/blob/master/README.md' },
             ],
         technologies: [
-            'Python', 'Jupyter Notebook', 'Flask', 'SQLAlchemy', 'Postgres', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Heroku'
+            'Python', 'Jupyter Notebook', 'Flask', 'SQLAlchemy', 'Postgres', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Sci-Kit Learn', 'Heroku'
             ]
     },
 
@@ -30,7 +30,7 @@ portfolioInfo = [
             {linkTag: 'Visualization', linkURL: 'https://geotweetapp.herokuapp.com'}
             ],
         technologies: [
-            'Python', 'Jupyter Notebook', 'Flask', 'SQLAlchemy', 'SQLite', 'Postgres', 'ETL (Extract/Transform/Load)', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Heroku'
+            'Python', 'Jupyter Notebook', 'Flask', 'SQLAlchemy', 'SQLite', 'Postgres', 'ETL (Extract/Transform/Load)', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Linear Regression', 'Heroku'
             ]
     },
 
