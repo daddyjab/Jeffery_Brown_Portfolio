@@ -12,7 +12,7 @@ portfolioInfo = [
     },
 
     {   projectName: 'Machine Learning Notes',
-        description: 'Selected Notes and Code Snippets for Machine Learning (supervised, unsupervised)',
+        description: 'Notes and Code Snippets for Machine Learning (supervised, unsupervised) created by me or collected and enhanced',
         links: [
             {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/ML_Notes/blob/master/README.md' },
             {linkTag: 'Visualizations', linkURL: 'https://github.com/daddyjab/ML_Notes/blob/master/README.md#visualizations' }
