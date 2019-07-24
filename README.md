@@ -33,32 +33,3 @@ The content on the Portfolio page is rendered dynamically based upon information
 * D3 is used to bind the project information to the Project table on the right of the page.
 * The technology terms are collected and used to create the list of technologies on the left of the page.  Additional D3 code adds on click actions to highlight the technology terms.
 * Bootstrap is used to ensure good formating on both large and smaller screens
-
-Example of Mermaid diagram:
-
-```mermaid
-graph TD;
-    A((Box A));
-    click A "http://www.github.com" "Tooltip for a link to GitHub"
-
-    B>Box B];
-    C[Box C];
-    D(Box D);
-    E{Box E};
-    A-.-B;
-    A-->|messages|C;
-    B-->D;
-    C-.msgs.->D;
-    A-->E;
-    E-.->|more <span>stuff</span>|D;
-    E==>|ready|C
-    
-    linkStyle 1 stroke:#00f,stroke-width:4px;
-
-    style A fill:#dfd,stroke:#0f0,stroke-width:8px;
-
-    classDef moduleStart fill:#ddf,stroke:#00f,stroke-width:4px;
-
-    class B,D moduleStart;
-
-```
