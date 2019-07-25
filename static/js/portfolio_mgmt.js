@@ -15,6 +15,9 @@ function addTechnologyTerm(a_term) {
 function buildProjectInfoTable() {
 
   // Select the table body
+
+  var project_info_div = d3.select("div.project_info");
+
   var tbody = d3.select("#project_info_table>tbody");
 
   // Create a placeholder for a tooltip
@@ -24,7 +27,7 @@ function buildProjectInfoTable() {
     .style("z-index", "10")
     .style("visibility", "hidden")
     .attr('id', "project_tool_tip")
-    .attr('class', "d-xs-block")
+    // .attr('class', "d-xs-block")
     .text("");
 
   // Bind the object list containing project information to the spans we'll have on the page
@@ -35,33 +38,6 @@ function buildProjectInfoTable() {
   var this_row = projectTableRows
     .enter()
     .append("tr");
-  // .on('mouseover', function (d, i) {
-  //   // console.log(d.description);
-  //   tooltip
-  //     .style("visibility", "visible")   // Display the tooltip
-  //     .text(d.description);           // Display the project description
-
-  //   console.log(`X: ${event.pageX}, Y: ${event.pageY}`)
-  //   console.log(event)
-  //   // console.log(tooltip.node().getBoundingClientRect())
-  // })
-  // .on('mouseout', function (d, i) {
-  //   tooltip
-  //     .style("visibility", "hidden")   // Hide the tooltip
-  //     .text("");                     // Clear the tooltip text
-  // })
-  // .on('mousemove', function (d, i) {
-  //   // Get the size of the bounding object over which we're moving
-  //   rect = this.getBoundingClientRect();
-  //   // loc_x = d3.event.pageX - rect.x - this.clientLeft - window.pageXOffset;
-  //   // loc_y = d3.event.pageY - rect.y - this.clientTop - window.pageYOffset;
-  //   loc_x = d3.event.pageX - this.clientLeft - window.pageXOffset;
-  //   loc_y = d3.event.pageY - this.clientTop - window.pageYOffset - 20;
-  //   tooltip
-  //     .style("top", (loc_y) + "px")
-  //     .style("left", (loc_x) + "px");
-  // });
-
 
   // Cell: Project Name ******************* TABLE CELL
   var cell_project_name = this_row
@@ -74,137 +50,116 @@ function buildProjectInfoTable() {
 
     .on('mouseover', function (d, i) {
 
-      // Set the location for the tooltip message
-      // loc_x = event.offsetX;
-      // loc_y = event.offsetY;
-      this_rect = this.getBoundingClientRect();
+      // Get the bounding boxes (in page coordinates) for various page elements
       // this_row_rect = this_row.node().getBoundingClientRect();
-      
-      // loc_x = d3.event.pageX - this_rect.left - this.clientLeft - window.pageXOffset;
-      loc_x = d3.event.pageX - this_rect.left - this.clientLeft;
-      // loc_y = d3.event.pageY - this_rect.top - this.clientTop - window.pageYOffset + this_row_rect.top;
-      // loc_y = d3.event.pageY - this_rect.top - this.clientTop - window.pageYOffset;
-      // loc_y = d3.event.pageY - this.clientTop - window.pageYOffset;
-      // loc_y = d3.event.pageY - this.clientTop;
-      loc_y = d3.event.pageY - this.clientTop - Math.round(this_rect.height/2);
+      this_rect = this.getBoundingClientRect();
+      tbody_rect = tbody.node().getBoundingClientRect();
+      project_info_div_rect = project_info_div.node().getBoundingClientRect();
 
-      // Set the tooltip text to be displayed
-      // tooltip_text = `(tooltip left: ${loc_x}, tooltip top: ${loc_y})`;  // DEBUG: Show coordinates
-      // tooltip_text += `\n(event.pageX: ${event.pageX}, event.pageY: ${event.pageY})`;
-      // tooltip_text += `\n(event.clientX: ${event.clientX}, event.clientY: ${event.clientY})`;
-      // tooltip_text += `\n(this_rect.left: ${this_rect.left}, this_rect.top: ${this_rect.top})`;
-      // tooltip_text += `\n(this.clientLeft: ${this.clientLeft}, this.clientTop: ${this.clientTop})`;
-      // tooltip_text += `\n(this_row_rect.left: ${this_row_rect.left}, this_row_rect.top: ${this_row_rect.top})`;
-      // tooltip_text += `\n(this_row.clientLeft: ${this_row.node().clientLeft}, this_row.clientTop: ${this_row.node().clientTop})`;
-      // tooltip_text += `\n(window.pageXOffset: ${window.pageXOffset}, twindow.pageYOffset: ${window.pageYOffset})`;
-      // tooltip_text += `\n(event.offsetX: ${event.offsetX}, event.offsetY: ${event.offsetY})`;
-      // tooltip_text += `\n(event.clientX: ${event.clientX}, event.clientY: ${event.clientY})`;
+      // Set the location of the tool tip: Tooltip 'left' attribute
+      // tooltip_left = d3.event.pageX - this_rect.left - this.clientLeft - window.pageXOffset;
 
-      tooltip_text = d.description;   // Show the project description as the tooltip text
+      // (Mouse page X coord) - (Origin of the table body with adjustment for the effects of scrolling)
+      tooltip_left = d3.event.pageX - (window.pageXOffset + tbody_rect.left);
 
+
+      // Set the location of the tool tip: Tooltip 'top' attribute
+      // tooltip_top = d3.event.pageY - this_rect.top - this.clientTop - window.pageYOffset + this_row_rect.top;
+      // tooltip_top = d3.event.pageY - this_rect.top - this.clientTop - window.pageYOffset;
+      // tooltip_top = d3.event.pageY - this.clientTop - window.pageYOffset;
+      // tooltip_top = d3.event.pageY - this.clientTop;
+      // tooltip_top = d3.event.pageY - this.clientTop - Math.round(this_rect.height/2);
+      // tooltip_top = d3.event.clientY - this.clientTop - Math.round(this_rect.height/2);
+      // tooltip_top = d3.event.clientY + window.pageYOffset - Math.round(this_rect.height / 2); // ALMOST DONE! Need to work w/ narrower screen
+      // tooltip_top = d3.event.pageY;
+      // tooltip_top = d3.event.pageY - (window.pageYOffset + tbody_rect.top);
+
+      // (Mouse Coord in page coord) - (Origin of the table body with adjustment for the effects of scrolling) + (Height of the heading)
+      tooltip_top = d3.event.pageY - (window.pageYOffset + tbody_rect.top) + (tbody_rect.top - project_info_div_rect.top) + 40;
+
+      // DEBUG: Show coordinates
+      debug_text = `(tooltip left: ${tooltip_left}, tooltip top: ${tooltip_top})`;  // DEBUG: Show coordinates
+      debug_text += `\n\n(event.pageX: ${event.pageX}, event.pageY: ${event.pageY})`;
+      // debug_text += `\n(event.clientX: ${event.clientX}, event.clientY: ${event.clientY})`;
+      // debug_text += `\n(event.offsetX: ${event.offsetX}, event.offsetY: ${event.offsetY})`;
+
+      // debug_text += `\n\n(window.pageXOffset: ${window.pageXOffset}, window.pageYOffset: ${window.pageYOffset})`;
+
+      // debug_text += `\n\n(this_rect.left: ${this_rect.left}, this_rect.top: ${this_rect.top}, this_rect.right: ${this_rect.right}, this_rect.bottom: ${this_rect.bottom})`;
+      // debug_text += `\n\n(this_rect.width: ${this_rect.width}, this_rect.height: ${this_rect.height})`;
+      // // debug_text += `\n(this.clientLeft: ${this.clientLeft}, this.clientTop: ${this.clientTop})`;
+
+      // debug_text += `\n\n(this_row_rect.left: ${this_row_rect.left}, this_row_rect.top: ${this_row_rect.top}, this_row_rect.right: ${this_row_rect.right}, this_row_rect.bottom: ${this_row_rect.bottom})`;
+      // debug_text += `\n(this_row.clientLeft: ${this_row.node().clientLeft}, this_row.clientTop: ${this_row.node().clientTop})`;
+
+      // debug_text += `\n\n(tbody_rect.left: ${tbody_rect.left}, tbody_rect.top: ${tbody_rect.top}, tbody_rect.right: ${tbody_rect.right}, tbody_rect.bottom: ${tbody_rect.bottom})`;
+      // debug_text += `\n(tbody.clientLeft: ${tbody.clientLeft}, tbody.clientTop: ${tbody.clientTop})`;
+      console.log(`\n*** DEBUG: Project Name: ${d.projectName}  ***************************`);
+      console.log(debug_text);
+      console.log("\project_info_div_rect:");
+      console.log(project_info_div_rect);
+      console.log("\ntbody_rect:");
+      console.log(tbody_rect);
+
+      // DEBUG: Display Mouse coordinates as the tooltip
+      // debug_text = "Mouse Event Properties:";
+      // debug_text += `\nclientX: ${event.clientX}, clientY: ${event.clientY}`;     // Coord in local (DOM content) coordinates
+      // debug_text += `\npageX: ${event.pageX}, pageY: ${event.pageY}`;             // Coord relative to the whole HTML document
+      // debug_text += `\noffsetX: ${event.offsetX}, offsetY: ${event.offsetY}`;     // Coord relative to the padding edge of the target node (Project Name?)
+      // debug_text += `\nlayerX: ${event.layerX}, layerY: ${event.layerY}`;         // Coord 
+      // debug_text += `\nscreenX: ${event.screenX}, screenY: ${event.screenY}`;     // Coord in global (screen) coordinates
+
+      // Set the text needed for the tooltip
+      tooltip_text = `Click Project or Links for details`;   // Show the project description as the tooltip text
+
+      // Make the tooltip visible, populate it, and move to the proper location 
       tooltip
         .style("visibility", "visible")   // Display the tooltip
-        .text(tooltip_text)               // Display the project description
-        .style("left", (loc_x) + "px")
-        .style("top", (loc_y) + "px");
+        .text(tooltip_text)                 // Text to use for the tooltip
+        .style("left", (tooltip_left) + "px")    // Tooltip location relative to containing element (tbody?)
+        .style("top", (tooltip_top) + "px");    // Tooltip location relative to containing element (tbody?)
 
-      console.log("Mouse Event Properties:")
-      console.log(`pageX: ${event.pageX}, pageY: ${event.pageY}`)             // Coord relative to the whole HTML document
-      console.log(`offsetX: ${event.offsetX}, offsetY: ${event.offsetY}`)     // Coord relative to the padding edge of the target node (Project Name?)
-      console.log(`clientX: ${event.clientX}, clientY: ${event.clientY}`)     // Coord in local (DOM content) coordinates
-      console.log(`layerX: ${event.layerX}, layerY: ${event.layerY}`)         // Coord 
-      console.log(`screenX: ${event.screenX}, screenY: ${event.screenY}`)     // Coord in global (screen) coordinates
-      console.log(event)
-
-      console.log("\nOther Properties:")
-      console.log(`Tooltip Bounding Box:`)
-      console.log(tooltip.node().getBoundingClientRect())
-
-      console.log("\nthis Properties:")
-      console.log(`this.clientLeft: ${this.clientLeft}, this.clientTop: ${this.clientTop}`)
-      console.log(`this_rect.left: ${this_rect.left}, this_rect.top: ${this_rect.top}`)
-      console.log(this_rect)
-      console.log(this)
-
-      console.log("\ncell_project_name Properties:")
-      console.log(cell_project_name.node().getBoundingClientRect())
-      console.log(cell_project_name)
-
-      // console.log("\nthis_row Properties:")
-      // console.log(this_row.node().getBoundingClientRect())
-      // console.log(this_row)
-
-      // console.log("\ntbody Properties:")
-      // console.log(tbody.node().getBoundingClientRect())
-      // console.log(tbody)
-
-      // proj_info = d3.select("#project_info_table");
-      // console.log("\nproject_info Properties:")
-      // console.log(proj_info.node().getBoundingClientRect())
-      // console.log(proj_info)
-
-      // console.log("\ncol-md-8 parent of project_info Properties:")
-      // console.log(proj_info.node().parentNode.getBoundingClientRect())
-      // console.log(proj_info.node().parentNode)
-
-      console.log(`\nWindow Properties:`)
-      console.log(`window.pageXOffset: ${window.pageXOffset}, window.pageYOffset: ${window.pageYOffset}`)
-
-      console.log(window)
+      // DEBUG: Display the bounding box for the tooltip
+      // tooltip_rect = tooltip.node().getBoundingClientRect();
+      // console.log("\ntooltip Properties:");
+      // console.log(`(tooltip_rect.left: ${tooltip_rect.left}, tooltip_rect.top: ${tooltip_rect.top}, tooltip_rect.right: ${tooltip_rect.right}, tooltip_rect.bottom: ${tooltip_rect.bottom})`);
+      // console.log(`(tooltip.clientLeft: ${tooltip.clientLeft}, tooltip.clientTop: ${tooltip.clientTop})`);
+      // console.log(tooltip);
     })
 
-
     .on('mousemove', function (d, i) {
-      // Get the size of the bounding object over which we're moving
-      // rect = this.getBoundingClientRect();
-      // loc_x = d3.event.pageX - rect.x - this.clientLeft - window.pageXOffset;
-      // loc_y = d3.event.pageY - rect.y - this.clientTop - window.pageYOffset;
-      // loc_x = d3.event.pageX - this.clientLeft - window.pageXOffset;
-      // loc_y = d3.event.pageY - this.clientTop - window.pageYOffset - 20;
-
-      // loc_x = this.clientLeft + d3.event.offsetX
-      // loc_y = this.clientTop + d3.event.offsetY
-
-      // Set the location for the tooltip message
+      // Get the bounding boxes (in page coordinates) for various page elements
+      // this_row_rect = this_row.node().getBoundingClientRect();
       this_rect = this.getBoundingClientRect();
-      this_row_rect = this_row.node().getBoundingClientRect();
-      
-      // loc_x = d3.event.pageX - this_rect.left - this.clientLeft - window.pageXOffset;
-      loc_x = d3.event.pageX - this_rect.left - this.clientLeft;
-      // loc_y = d3.event.pageY - this_rect.top - this.clientTop - window.pageYOffset + this_row_rect.top;
-      // loc_y = d3.event.pageY - this_rect.top - this.clientTop - window.pageYOffset;
-      // loc_y = d3.event.pageY - this.clientTop - window.pageYOffset;
-      // loc_y = d3.event.pageY - this.clientTop;
-      loc_y = d3.event.pageY - this.clientTop - Math.round(this_rect.height/2);
+      tbody_rect = tbody.node().getBoundingClientRect();
+      project_info_div_rect = project_info_div.node().getBoundingClientRect();
 
-      // Set the tooltip text to be displayed
-      // tooltip_text = `(tooltip left: ${loc_x}, tooltip top: ${loc_y})`;  // DEBUG: Show coordinates
-      // tooltip_text += `\n(event.pageX: ${event.pageX}, event.pageY: ${event.pageY})`;
-      // tooltip_text += `\n(event.clientX: ${event.clientX}, event.clientY: ${event.clientY})`;
-      // tooltip_text += `\n(this_rect.left: ${this_rect.left}, this_rect.top: ${this_rect.top})`;
-      // tooltip_text += `\n(this.clientLeft: ${this.clientLeft}, this.clientTop: ${this.clientTop})`;
-      // tooltip_text += `\n(this_row_rect.left: ${this_row_rect.left}, this_row_rect.top: ${this_row_rect.top})`;
-      // tooltip_text += `\n(this_row.clientLeft: ${this_row.node().clientLeft}, this_row.clientTop: ${this_row.node().clientTop})`;
-      // tooltip_text += `\n(window.pageXOffset: ${window.pageXOffset}, twindow.pageYOffset: ${window.pageYOffset})`;
-      // tooltip_text += `\n(event.offsetX: ${event.offsetX}, event.offsetY: ${event.offsetY})`;
-      // tooltip_text += `\n(event.clientX: ${event.clientX}, event.clientY: ${event.clientY})`;
+      // Set the location of the tool tip: Tooltip 'left' attribute
+      // (Mouse page X coord) - (Origin of the table body with adjustment for the effects of scrolling)
+      tooltip_left = d3.event.pageX - (window.pageXOffset + tbody_rect.left);
 
-      // tooltip_text = d.description;   // Show the project description as the tooltip text
+      // Set the location of the tool tip: Tooltip 'top' attribute
+      // (Mouse Coord in page coord) - (Origin of the table body with adjustment for the effects of scrolling) + (Half height of the current cell)
+      // tooltip_top = d3.event.pageY - (window.pageYOffset + tbody_rect.top);
 
+      // (Mouse Coord in page coord) - (Origin of the table body with adjustment for the effects of scrolling) + (Height of the heading)
+      tooltip_top = d3.event.pageY - (window.pageYOffset + tbody_rect.top) + (tbody_rect.top - project_info_div_rect.top) + 40;
+
+
+
+      // DEBUG: Display Mouse coordinates as the tooltip
+      // debug_text = "Mouse Event Properties:";
+      // debug_text += `\nclientX: ${event.clientX}, clientY: ${event.clientY}`;     // Coord in local (DOM content) coordinates
+      // debug_text += `\npageX: ${event.pageX}, pageY: ${event.pageY}`;             // Coord relative to the whole HTML document
+      // debug_text += `\noffsetX: ${event.offsetX}, offsetY: ${event.offsetY}`;     // Coord relative to the padding edge of the target node (Project Name?)
+      // debug_text += `\nlayerX: ${event.layerX}, layerY: ${event.layerY}`;         // Coord 
+      // debug_text += `\nscreenX: ${event.screenX}, screenY: ${event.screenY}`;     // Coord in global (screen) coordinates
+
+      // Move the tooltip depending upon the current mouse location
       tooltip
-        .text(tooltip_text)               // Display the project description
-        .style("left", (loc_x) + "px")
-        .style("top", (loc_y) + "px");
-
-      // console.log("Mouse Event Properties:")
-      // console.log(`clientX: ${event.clientX}, clientY: ${event.clientY}`)     // Coord in local (DOM content) coordinates
-      // console.log(`offsetX: ${event.offsetX}, offsetY: ${event.offsetY}`)     // Coord relative to the padding edge of the target node (Project Name?)
-      // console.log(`layerX: ${event.layerX}, layerY: ${event.layerY}`)         // Coord 
-      // console.log(`pageX: ${event.pageX}, pageY: ${event.pageY}`)             // Coord relative to the whole HTML document
-      // console.log(`screenX: ${event.screenX}, screenY: ${event.screenY}`)     // Coord in global (screen) coordinates
-      // console.log(event)
-
-
+        // .text(debug_text)               // DEBUG: Display the mouse event coordinates
+        .style("left", (tooltip_left) + "px")
+        .style("top", (tooltip_top) + "px");
     })
 
     .on('mouseout', function (d, i) {
