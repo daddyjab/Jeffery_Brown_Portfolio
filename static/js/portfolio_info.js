@@ -1,13 +1,24 @@
 // portfolioInfo
 // This object provides the project info for the list of projects
 portfolioInfo = [
-    {   projectName: 'CommTrends (IN PROGRESS)',
-        description: 'An analysis of telecommunications trends in the U.S. (IN PROGRESS)',
+    {   projectName: 'Diabetic Retinopathy Detection',
+        description: 'Convolutional Neural Network used to classify retinal images for various stages of diabetic retinopathy, a disease which can lead to blindness',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/CommTrends/blob/master/README.md' },
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/Diabetic_Retinopathy_Detection' },
+            {linkTag: 'Report/Analysis', linkURL: 'https://github.com/daddyjab/Diabetic_Retinopathy_Detection/blob/master/Report-Diabetic_Retinopathy_Augmented-96x96%2C64%2C128-DesktopCPUOnly.ipynb' }
             ],
         technologies: [
-            'Python', 'Jupyter Notebook', 'Flask', 'SQLAlchemy', 'Postgres', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Sci-Kit Learn', 'Heroku'
+            'Kaggle', 'Keras', 'Neural Networks', 'Python', 'Image Augmentation', 'Classification', 'Jupyter Notebook', 'Machine Learning', 'Sci-Kit Learn', 'Matplotlib'
+            ]
+    },
+
+    {   projectName: 'CommTrends (Exploration)',
+        description: 'An analysis of telecommunications trends in the U.S. (IN PROGRESS)',
+        links: [
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/CommTrends/blob/master/README.md' }
+            ],
+        technologies: [
+            'Python', 'Jupyter Notebook', 'Flask', 'SQLAlchemy', 'Postgres', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Sci-Kit Learn'
             ]
     },
 
@@ -18,7 +29,7 @@ portfolioInfo = [
             {linkTag: 'Visualizations', linkURL: 'https://github.com/daddyjab/ML_Notes/blob/master/README.md#visualizations' }
             ],
         technologies: [
-            'Python', 'Jupyter Notebook', 'Machine Learning', 'Sci-Kit Learn', 'Dataset Generation', 'Regression', 'Classification', 'Matplotlib'
+            'Python', 'Keras', 'Neural Networks', 'Jupyter Notebook', 'Machine Learning', 'Sci-Kit Learn', 'Dataset Generation', 'Regression', 'Classification', 'Matplotlib'
             ]
     },
 
