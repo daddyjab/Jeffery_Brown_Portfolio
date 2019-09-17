@@ -4,7 +4,7 @@ portfolioInfo = [
     {   projectName: 'Diabetic Retinopathy Detection',
         description: 'Convolutional Neural Network used to classify retinal images for various stages of diabetic retinopathy, a disease which can lead to blindness',
         links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/Diabetic_Retinopathy_Detection' },
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/Diabetic_Retinopathy_Detection/blob/master/README.md' },
             {linkTag: 'Report/Analysis', linkURL: 'https://github.com/daddyjab/Diabetic_Retinopathy_Detection/blob/master/Report-Diabetic_Retinopathy_Augmented-96x96%2C64%2C128-DesktopCPUOnly.ipynb' }
             ],
         technologies: [
