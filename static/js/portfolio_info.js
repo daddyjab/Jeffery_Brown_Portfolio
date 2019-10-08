@@ -8,28 +8,7 @@ portfolioInfo = [
             {linkTag: 'Report/Analysis', linkURL: 'https://github.com/daddyjab/Diabetic_Retinopathy_Detection/blob/master/Report-Diabetic_Retinopathy_Augmented-96x96%2C64%2C128-DesktopCPUOnly.ipynb' }
             ],
         technologies: [
-            'Kaggle', 'Keras', 'Neural Networks', 'Python', 'Image Augmentation', 'Classification', 'Jupyter Notebook', 'Machine Learning', 'Sci-Kit Learn', 'Matplotlib'
-            ]
-    },
-
-    {   projectName: 'CommTrends (Exploration)',
-        description: 'An analysis of telecommunications trends in the U.S. (IN PROGRESS)',
-        links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/CommTrends/blob/master/README.md' }
-            ],
-        technologies: [
-            'Python', 'Jupyter Notebook', 'Flask', 'SQLAlchemy', 'Postgres', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Sci-Kit Learn'
-            ]
-    },
-
-    {   projectName: 'Machine Learning Notes',
-        description: 'Notes and Code Snippets for Machine Learning (supervised, unsupervised) created by me or collected and enhanced',
-        links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/ML_Notes/blob/master/README.md' },
-            {linkTag: 'Visualizations', linkURL: 'https://github.com/daddyjab/ML_Notes/blob/master/README.md#visualizations' }
-            ],
-        technologies: [
-            'Python', 'Keras', 'Neural Networks', 'Jupyter Notebook', 'Machine Learning', 'Sci-Kit Learn', 'Dataset Generation', 'Regression', 'Classification', 'Matplotlib'
+            'Kaggle', 'Keras', 'Artificial Intelligence', 'Neural Networks', 'Python', 'Image Augmentation', 'Classification', 'Jupyter Notebook', 'Machine Learning', 'Sci-Kit Learn', 'Matplotlib'
             ]
     },
 
@@ -41,19 +20,7 @@ portfolioInfo = [
             {linkTag: 'Visualization', linkURL: 'https://geotweetapp.herokuapp.com'}
             ],
         technologies: [
-            'Python', 'Jupyter Notebook', 'Flask', 'SQLAlchemy', 'SQLite', 'Postgres', 'ETL (Extract/Transform/Load)', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Linear Regression', 'Heroku'
-            ]
-    },
-
-    {   projectName: 'Earthquake',
-        description: 'Visualization of Recent Global Earthquake Activity',
-        links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/Earthquake/blob/master/README.md' },
-            {linkTag: 'Visualization (D3)', linkURL: 'https://daddyjab.github.io/Earthquake/'},
-            {linkTag: 'Power BI (pbix)', linkURL: 'https://github.com/daddyjab/Earthquake/raw/master/resources/USGS%20Seismic%20Events.pbix'}
-            ],
-        technologies: [
-            'JavaScript', 'D3', 'Leaflet', 'Power BI'
+            'Python', 'Jupyter Notebook', 'Flask', 'SQL', 'SQLAlchemy', 'SQLite', 'Postgres', 'ETL (Extract/Transform/Load)', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Linear Regression', 'Heroku'
             ]
     },
 
@@ -70,6 +37,39 @@ portfolioInfo = [
             ]
     },
 
+    {   projectName: 'CommTrends (Exploration)',
+        description: 'An analysis of telecommunications trends in the U.S. (IN PROGRESS)',
+        links: [
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/CommTrends/blob/master/README.md' }
+            ],
+        technologies: [
+            'Python', 'Jupyter Notebook', 'Flask', 'SQL', 'SQLAlchemy', 'Postgres', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Sci-Kit Learn'
+            ]
+    },
+
+    {   projectName: 'Machine Learning Notes',
+        description: 'Notes and Code Snippets for Machine Learning (supervised, unsupervised) created by me or collected and enhanced',
+        links: [
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/ML_Notes/blob/master/README.md' },
+            {linkTag: 'Visualizations', linkURL: 'https://github.com/daddyjab/ML_Notes/blob/master/README.md#visualizations' }
+            ],
+        technologies: [
+            'Python', 'Keras', 'Neural Networks', 'Jupyter Notebook', 'Machine Learning', 'Sci-Kit Learn', 'Dataset Generation', 'Regression', 'Classification', 'Matplotlib'
+            ]
+    },
+
+    {   projectName: 'Earthquake',
+        description: 'Visualization of Recent Global Earthquake Activity',
+        links: [
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/Earthquake/blob/master/README.md' },
+            {linkTag: 'Visualization (D3)', linkURL: 'https://daddyjab.github.io/Earthquake/'},
+            {linkTag: 'Power BI (pbix)', linkURL: 'https://github.com/daddyjab/Earthquake/raw/master/resources/USGS%20Seismic%20Events.pbix'}
+            ],
+        technologies: [
+            'JavaScript', 'D3', 'Leaflet', 'Power BI'
+            ]
+    },
+
     {   projectName: 'I Was Poisoned',
         description: 'Extract/Transform/Load operations to support analysis of Food Poisoning incidents vs. Food Inspections',
         links: [
@@ -77,7 +77,7 @@ portfolioInfo = [
             {linkTag: 'Summary', linkURL: 'https://github.com/daddyjab/IWasPoisoned_ETL/blob/master/Documentation/ETL_Project_Report.ipynb' }
             ],
         technologies: [
-            'Python', 'Jupyter Notebook', 'MongoDB', 'ETL (Extract/Transform/Load)', 'Web Scraping', 'BeautifulSoup', 'Splinter'
+            'Python', 'Jupyter Notebook', 'NoSQL', 'PyMongo', 'MongoDB', 'ETL (Extract/Transform/Load)', 'Web Scraping', 'BeautifulSoup', 'Splinter'
             ]
     },
 
@@ -100,7 +100,7 @@ portfolioInfo = [
             {linkTag: 'Sample', linkURL: 'https://github.com/daddyjab/MarsNews/blob/master/docs/MarsNews-sample.png' }
             ],
         technologies: [
-            'Python', 'Jupyter Notebook', 'Flask', 'PyMongo', 'MongoDB', 'Web Scraping', 'BeautifulSoup', 'Splinter'
+            'Python', 'Jupyter Notebook', 'Flask', 'PyMongo', 'NoSQL', 'MongoDB', 'Web Scraping', 'BeautifulSoup', 'Splinter'
             ]
     },
 
@@ -122,7 +122,7 @@ portfolioInfo = [
             {linkTag: 'Visualization', linkURL: 'https://project-biodiversity.herokuapp.com/'}
             ],
         technologies: [
-            'Python', 'Jupyter Notebook', 'Flask', 'SQLAlchemy', 'SQLite', 'D3', 'Plotly', 'Heroku'
+            'Python', 'Jupyter Notebook', 'Flask', 'SQL', 'SQLAlchemy', 'SQLite', 'D3', 'Plotly', 'Heroku'
             ]
     },
 
