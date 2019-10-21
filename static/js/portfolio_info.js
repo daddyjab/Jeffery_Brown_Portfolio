@@ -9,7 +9,7 @@ portfolioInfo = [
             {linkTag: 'Visualizations', linkURL: 'https://github.com/daddyjab/DL_Notes#visualizations' }
             ],
         technologies: [
-            'Python', 'Deep Learning', 'Neural Networks', 'Artificial Intelligence', 'Jupyter Notebook', 'Keras', 'Sci-Kit Learn', 'Classification', 'Regression', 'Matplotlib'
+            'Python', 'Deep Learning', 'Neural Networks', 'Artificial Intelligence', 'Jupyter Notebook', 'Keras', 'Machine Learning', 'Sci-Kit Learn', 'Classification', 'Regression', 'Matplotlib'
             ]
     },
 
