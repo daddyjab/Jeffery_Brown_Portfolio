@@ -49,16 +49,6 @@ portfolioInfo = [
             ]
     },
 
-    {   projectName: 'CommTrends (Exploration)',
-        description: 'An analysis of telecommunications trends in the U.S.',
-        links: [
-            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/CommTrends/blob/master/README.md' }
-            ],
-        technologies: [
-            'Python', 'Jupyter Notebook', 'Flask', 'SQL', 'SQLAlchemy', 'Postgres', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Sci-Kit Learn'
-            ]
-    },
-
     {   projectName: 'Machine Learning Notes',
         description: 'Notes and Code Snippets for Machine Learning (supervised, unsupervised) created by me or collected and enhanced',
         links: [
@@ -67,6 +57,16 @@ portfolioInfo = [
             ],
         technologies: [
             'Python', 'Keras', 'Neural Networks', 'Jupyter Notebook', 'Machine Learning', 'Sci-Kit Learn', 'Dataset Generation', 'Regression', 'Classification', 'Matplotlib'
+            ]
+    },
+
+    {   projectName: 'CommTrends (Exploration)',
+        description: 'An analysis of telecommunications trends in the U.S.',
+        links: [
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/CommTrends/blob/master/README.md' }
+            ],
+        technologies: [
+            'Python', 'Jupyter Notebook', 'Flask', 'SQL', 'SQLAlchemy', 'Postgres', 'JavaScript', 'D3', 'Leaflet', 'Plotly', 'Machine Learning', 'Sci-Kit Learn'
             ]
     },
 
