@@ -1,6 +1,18 @@
 // portfolioInfo
 // This object provides the project info for the list of projects
 portfolioInfo = [
+
+    {   projectName: 'Deep Learning Notes',
+        description: 'Notes and Code Snippets for Deep Learning (Neural Networks) created by me or collected and enhanced',
+        links: [
+            {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/DL_Notes/blob/master/README.md' },
+            {linkTag: 'Visualizations', linkURL: 'https://github.com/daddyjab/DL_Notes#visualizations' }
+            ],
+        technologies: [
+            'Python', 'Deep Learning', 'Neural Networks', 'Jupyter Notebook', 'Keras', 'Sci-Kit Learn', 'Dataset Generation', 'Regression', 'Classification', 'Matplotlib'
+            ]
+    },
+
     {   projectName: 'Diabetic Retinopathy Detection',
         description: 'Convolutional Neural Network used to classify retinal images for various stages of diabetic retinopathy, a disease which can lead to blindness',
         links: [
