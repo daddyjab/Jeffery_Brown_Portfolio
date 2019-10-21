@@ -9,7 +9,7 @@ portfolioInfo = [
             {linkTag: 'Visualizations', linkURL: 'https://github.com/daddyjab/DL_Notes#visualizations' }
             ],
         technologies: [
-            'Python', 'Deep Learning', 'Neural Networks', 'Jupyter Notebook', 'Keras', 'Sci-Kit Learn', 'Dataset Generation', 'Regression', 'Classification', 'Matplotlib'
+            'Python', 'Deep Learning', 'Neural Networks', 'Artificial Intelligence', 'Jupyter Notebook', 'Keras', 'Sci-Kit Learn', 'Classification', 'Regression', 'Matplotlib'
             ]
     },
 
@@ -20,7 +20,7 @@ portfolioInfo = [
             {linkTag: 'Report/Analysis', linkURL: 'https://github.com/daddyjab/Diabetic_Retinopathy_Detection/blob/master/Report-Diabetic_Retinopathy_Augmented-96x96%2C64%2C128-DesktopCPUOnly.ipynb' }
             ],
         technologies: [
-            'Kaggle', 'Keras', 'Artificial Intelligence', 'Neural Networks', 'Python', 'Image Augmentation', 'Classification', 'Jupyter Notebook', 'Machine Learning', 'Sci-Kit Learn', 'Matplotlib'
+            'Python', 'Deep Learning', 'Neural Networks', 'Kaggle', 'Keras', 'Artificial Intelligence', 'Image Augmentation', 'Classification', 'Jupyter Notebook', 'Machine Learning', 'Sci-Kit Learn', 'Matplotlib'
             ]
     },
 
@@ -50,7 +50,7 @@ portfolioInfo = [
     },
 
     {   projectName: 'CommTrends (Exploration)',
-        description: 'An analysis of telecommunications trends in the U.S. (IN PROGRESS)',
+        description: 'An analysis of telecommunications trends in the U.S.',
         links: [
             {linkTag: 'GitHub', linkURL: 'https://github.com/daddyjab/CommTrends/blob/master/README.md' }
             ],
